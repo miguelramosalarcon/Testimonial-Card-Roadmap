@@ -1,0 +1,275 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SUSE", sans-serif;
+}
+
+:root {
+  --primary-color: #ffffff;
+  --secundary-color: #f61067;
+  --black-color: #1e1e1e;
+  --text-color-gris: #787878;
+  --color-yellow: #f1c102;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  margin-top: 1rem;
+  background-color: #fff;
+  gap: 1rem;
+}
+
+.testimonial__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* testimonial 1 */
+
+.testimonial-1 {
+  display: grid;
+  row-gap: 1rem;
+  width: 50%;
+}
+
+.testimonial__text1 {
+  background-color: var(--black-color);
+  color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 20px;
+  position: relative;
+}
+
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 15px 10px 0 10px;
+  border-color: var(--black-color) transparent transparent transparent;
+  transform: rotate(0deg);
+  position: absolute;
+  bottom: -13px;
+  left: 29px;
+}
+
+.testimonial__recomendate {
+  margin-top: 0.5rem;
+}
+
+.testimonial__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.testimonial__image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px var(--black-color);
+}
+
+.testimonial___profession {
+  font-size: 0.85rem;
+}
+
+/* testimonial 2 */
+.testimonial-2 {
+  width: 50%;
+  border: 2px solid var(--black-color);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.testimonial__text2 {
+  padding-bottom: 15px;
+}
+
+.testimonial__user2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* review */
+.review__container {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.review__image {
+  width: 200px;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+}
+
+.review__text {
+  background-color: var(--black-color);
+  color: var(--primary-color);
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.review__stars {
+  color: var(--color-yellow);
+  font-size: 40px;
+}
+
+.review__name {
+  font-size: 1.7rem;
+  letter-spacing: 1.5px;
+}
+
+.review__profession {
+  color: var(--text-color-gris);
+  padding-bottom: 0.75rem;
+}
+
+/* SLIDER */
+.slider {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid var(--black-color);
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 2rem;
+}
+
+/* Element: slider__testimonial */
+.slider__testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* Element: slider__text */
+.slider__text {
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+
+/* Element: slider__navigation */
+.slider__navigation {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Element: slider__button */
+.slider__button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--black-color);
+  cursor: pointer;
+  padding: 0 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.slider__button:hover {
+  transform: scale(1.2);
+}
+
+/* Element: slider__avatars */
+.slider__avatars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slider__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  opacity: 0.6;
+}
+
+.slider__avatar--active {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* Element: slider__name */
+.slider__name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* MEDIA QUERIES */
+@media screen and (width< 450px) {
+  .testimonial__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-1,
+  .testimonial-2 {
+    width: 80%;
+  }
+
+  .review__container {
+    flex-direction: column;
+    position: relative;
+    width: 95dvw;
+    margin: auto;
+  }
+
+  .review__stars,
+  .review__name,
+  .review__profession {
+    margin-left: 120px;
+  }
+
+  .review__name {
+    font-size: 1.5rem;
+  }
+
+  .review__foto {
+    position: absolute;
+  }
+
+  .review__image {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1/1;
+    margin-left: 30px;
+    margin-top: 25px;
+  }
+
+  .slider{
+    width: 95dvw;
+  }
+  .slider__testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+}
